@@ -8,6 +8,9 @@ namespace Laboratorio_3_OOP_201902
 {
     public class Game
     {
+        //Constantes
+        private const int DEFAULT_NUMBER_OF_PLAYERS = 2;
+
         //Atributos
         private Player[] players;
         private Player activePlayer;
@@ -20,6 +23,7 @@ namespace Laboratorio_3_OOP_201902
         public Game()
         {
             List<Deck> decks = new List<Deck>();
+            List<Card>[] captainCards = new List<Card>[DEFAULT_NUMBER_OF_PLAYERS];
         }
 
         //Propiedades
