@@ -49,13 +49,13 @@ namespace Laboratorio_3_OOP_201902
                 //Agregar la de combate a su fila correspondiente
                 if (playerId == 0 || playerId == 1)
                 {
-                    if (playerCards[playerId].ContainsKey(card.Type))
+                    if (playerCards[playerId].ContainsKey(card.enumType))
                     {
-                        playerCards[playerId][card.Type].Add(card);
+                        playerCards[playerId][card.enumType].Add(card);
                     }
                     else
                     {
-                        playerCards[playerId].Add(card.Type, new List<Card>() { card });
+                        playerCards[playerId].Add(card.enumType, new List<Card>() { card });
                     }
                 }
                 else
@@ -69,9 +69,9 @@ namespace Laboratorio_3_OOP_201902
                 if ((playerId == 0 || playerId == 1) && buffType == null)
                 {
                     //Revisar si no se a agregado el capitan
-                    if (!playerCards[playerId].ContainsKey(card.Type))
+                    if (!playerCards[playerId].ContainsKey(card.enumType))
                     {
-                        playerCards[playerId].Add(card.Type, new List<Card>() { card });
+                        playerCards[playerId].Add(card.enumType, new List<Card>() { card });
                     }
                     else
                     {
@@ -82,9 +82,9 @@ namespace Laboratorio_3_OOP_201902
                 else if ((playerId == 0 || playerId == 1) && buffType != null)
                 {
                     //Revisar si no se a agregado un buffer en la fila primero.
-                    if (!playerCards[playerId].ContainsKey(card.Type + buffType))
+                    if (!playerCards[playerId].ContainsKey(card.enumType + buffType))
                     {
-                        playerCards[playerId].Add(card.Type + buffType, new List<Card>() { card });
+                        playerCards[playerId].Add(card.enumType + buffType, new List<Card>() { card });
                     }
                     else
                     {

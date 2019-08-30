@@ -12,6 +12,7 @@ namespace Laboratorio_3_OOP_201902
         private Player[] players;
         private Player activePlayer;
         private List<Deck> decks;
+        private List<Card>[] captainCards;
         private Board boardGame;
         private bool endGame;
 
@@ -45,6 +46,13 @@ namespace Laboratorio_3_OOP_201902
             get
             {
                 return this.decks;
+            }
+        }
+        public List<Card>[] CaptainCards
+        {
+            get
+            {
+                return this.captainCards;
             }
         }
         public Board BoardGame
@@ -98,6 +106,19 @@ namespace Laboratorio_3_OOP_201902
             StreamReader reader = new StreamReader(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\Files\Decks.txt");
             StreamWriter writer = new StreamWriter(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\Files\Decks.txt");
 
+
+            reader.Close();
+            writer.Close();
+        }
+
+        public void ReadCaptains()
+        {
+            StreamReader reader = new StreamReader(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\Files\Captains.txt");
+            StreamWriter writer = new StreamWriter(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\Files\Captains.txt");
+
+
+            reader.Close();
+            writer.Close();
         }
 
     }

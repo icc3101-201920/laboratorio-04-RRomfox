@@ -22,10 +22,10 @@ namespace Laboratorio_3_OOP_201902.Cards
             }
         }
         //Constructor
-        public SpecialCard(string name, string type, string effect)
+        public SpecialCard(string name, string EnumType, string effect)
         {
             Name = name;
-            Type = type;
+            enumType = EnumType;
             Effect = effect;
             BuffType = null;
         }

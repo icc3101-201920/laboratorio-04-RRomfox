@@ -8,7 +8,7 @@ namespace Laboratorio_3_OOP_201902.Cards
     {
         //Atributos
         protected string name;
-        protected string type;
+        protected string EnumType;
         protected string effect;
 
         //Constructor
@@ -29,15 +29,15 @@ namespace Laboratorio_3_OOP_201902.Cards
                 this.name = value;
             }
         }
-        public string Type
+        public string enumType
         {
             get
             {
-                return this.type;
+                return this.EnumType;
             }
             set
             {
-                this.type = value;
+                this.EnumType = value;
             }
         }
         public string Effect

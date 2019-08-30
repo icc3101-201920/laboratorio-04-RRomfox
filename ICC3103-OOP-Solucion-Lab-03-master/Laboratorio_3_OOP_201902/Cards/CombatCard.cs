@@ -11,10 +11,10 @@ namespace Laboratorio_3_OOP_201902.Cards
         private bool hero;
 
         //Constructor
-        public CombatCard(string name, string type, string effect, int attackPoints, bool hero)
+        public CombatCard(string name, string EnumType, string effect, int attackPoints, bool hero)
         {
             Name = name;
-            Type = type;
+            enumType = EnumType;
             Effect = effect;
             AttackPoints = attackPoints;
             Hero = hero;
