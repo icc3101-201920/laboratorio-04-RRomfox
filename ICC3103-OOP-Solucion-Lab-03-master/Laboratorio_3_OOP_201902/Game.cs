@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace Laboratorio_3_OOP_201902
 {
@@ -17,7 +18,7 @@ namespace Laboratorio_3_OOP_201902
         //Constructor
         public Game()
         {
-
+            List<Deck> decks = new List<Deck>();
         }
 
         //Propiedades
@@ -92,5 +93,12 @@ namespace Laboratorio_3_OOP_201902
         {
             throw new NotImplementedException();
         }
+        public void ReadDecks()
+        {
+            StreamReader reader = new StreamReader(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\Files\Decks.txt");
+            StreamWriter writer = new StreamWriter(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\Files\Decks.txt");
+
+        }
+
     }
 }
